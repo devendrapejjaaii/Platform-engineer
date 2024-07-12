@@ -3,6 +3,8 @@
 # How it compares to DevOps?
 # How it compares to Cloud?
 
+![image](https://github.com/user-attachments/assets/b3029f5f-0c25-4420-b92c-936e9a7ff298)
+
 ## Problems with traditional way of working
 ![image](https://github.com/user-attachments/assets/2d85aa5c-a90f-4ff5-9e40-35394facf935)
 
