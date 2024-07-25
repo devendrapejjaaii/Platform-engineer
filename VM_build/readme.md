@@ -49,3 +49,54 @@ Manage the GitHub repository from both the VM and your local machine.
 7. In order to connect to registry we should have a username and password generated in ACR access key tab.
 8. Next to push image once conncted to ACR, use docker push command
 9. Finally create the container instace and check if your application is accessible over internet.
+
+### IDEA 1 Implementation
+
+1. Deploy a Azure Virtual machine manually or using ARM template with pre installed packages(like configureing backstage).
+    1.1 Install Curl or wget
+
+    ```
+    sudo apt-get update sudo apt-get install curl #OR sudo apt-get install wget
+    ````
+
+    1.2 Install Node.js LTS version using NVM
+
+    ```
+    curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash
+    nvm install 20
+    nvm use 20
+    nvm alias default 20
+    ```
+
+    1.3 Install Yarn
+
+    ```
+    npm install --global yarn
+    #To check the version 
+    yarn --version
+    ```
+
+    1.4 Install docker
+
+    ```
+    sudo apt-get update
+    sudo apt-get install apt-transport-https ca-certificates curl software-properties-common
+    curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo apt-key add -
+    sudo add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable"
+    sudo apt-get update
+    sudo apt-get install docker-ce docker-ce-cli containerd.io
+    docker --version
+    sudo systemctl start docker
+    ```
+
+    1.5 Install git
+
+    ```
+    sudo apt-get install git-all
+    ```
+
+2. Create backstage app using command 
+
+```
+npx @backstage/create-app@latest
+```
